@@ -4,21 +4,21 @@ document.addEventListener('DOMContentLoaded', function() {
         var password = document.getElementById('password').value;
 
         if (email === '') {
-            document.getElementById('email').classList.add('is-invalid');
             document.getElementById('emailError').textContent = 'O campo E-mail deve ser preenchido.';
+            document.getElementById('emailError').style.display = 'block';
             event.preventDefault();
         } else {
-            document.getElementById('email').classList.remove('is-invalid');
             document.getElementById('emailError').textContent = '';
+            document.getElementById('emailError').style.display = 'none';
         }
 
         if (password === '') {
-            document.getElementById('password').classList.add('is-invalid');
             document.getElementById('passwordError').textContent = 'O campo Senha deve ser preenchido.';
+            document.getElementById('passwordError').style.display = 'block';
             event.preventDefault();
         } else {
-            document.getElementById('password').classList.remove('is-invalid');
             document.getElementById('passwordError').textContent = '';
+            document.getElementById('passwordError').style.display = 'none';
         }
     });
 });
